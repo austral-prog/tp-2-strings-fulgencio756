@@ -1,3 +1,6 @@
+from dataclasses import replace
+
+
 def ficha():
     """Ejercicio integrador. Lee nombre, email y 3 notas, y genera una ficha
     de alumno aplicando: strip, title, lower, upper, int, len, find, slicing,
@@ -25,3 +28,46 @@ def ficha():
     #   - Las 3 notas, su suma, promedio y promedio entero
     #   - Cierre decorativo usando repetición de string ("=" * 24)
     pass
+    nombre=input("ingrese su nombre:")
+    nombre=nombre.lower()
+    nombre=nombre.title()
+    nombre=nombre.strip()
+    mail=input("ingrese su mail:")
+    mail=mail.lower()
+    inicial1=nombre[0:1]
+    espacio=nombre.find(" ")
+    inicial2=nombre[espacio+1]
+    apellido=nombre[espacio+1:]
+    solonombre=nombre[:espacio]
+    arroba=mail.find("@")
+    dominio=mail[arroba+1:]
+    nombre_en_mayusculsa=nombre.upper()
+
+    nota1=input("nota 1:")
+    nota2=input("nota 2:")
+    nota3=input("nota 3:")
+    nota1=int(nota1)
+    nota2=int(nota2)
+    nota3=int(nota3)
+    suma=nota1+nota2+nota3
+    promedio=suma/3
+    print("""========================
+    FICHA DEL ALUMNO
+========================""")
+    print("Nombre:",nombre)
+    print("Email:",mail)
+    print("Caracteres en nombre:", len(nombre))
+    print("Iniciales:",inicial1+inicial2)
+    print("Usuario:",apellido.lower()+"."+solonombre.lower())
+    print("Email valido:","@" in mail)
+    print("Dominio:",dominio)
+    print("Nombre para archivo:",nombre.replace(" ","_"))
+    print("Cantidad de a:",nombre.count("a"))
+    print("Codigo secreto:",nombre_en_mayusculsa[::-1])
+    print(f"""Nota 1: {nota1}
+Nota 2: {nota2}
+Nota 3: {nota3}""")
+    print("Suma:",suma)
+    print("Promedio:",promedio)
+    print("Promedio entero:",int(promedio))
+    print("========================")
