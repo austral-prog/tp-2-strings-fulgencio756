@@ -5,9 +5,7 @@ def string_methods():
     """
     nombre = "   Grace Hopper   "
     frase = "Python es un gran lenguaje de programacion"
-    multilinea = """Linea 1
-    Linea 2
-    Linea 3"""
+   
     print("Strip:",nombre.strip())
     print("Lstrip:",nombre.lstrip())
     print("Rstrip:",nombre.rstrip())
@@ -28,4 +26,4 @@ def string_methods():
 Linea 2
 Linea 3"""
     print(multilinea)
-
+string_methods()
