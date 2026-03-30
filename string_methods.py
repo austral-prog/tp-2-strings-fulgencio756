@@ -5,7 +5,7 @@ def string_methods():
     """
     nombre = "   Grace Hopper   "
     frase = "Python es un gran lenguaje de programacion"
-   
+
     print("Strip:",nombre.strip())
     print("Lstrip:",nombre.lstrip())
     print("Rstrip:",nombre.rstrip())
